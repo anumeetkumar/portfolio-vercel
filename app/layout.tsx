@@ -11,7 +11,7 @@ const siteName = "Anumeet Kumar - Front-End Developer";
 const siteUrl = "https://www.anumeet.tech/"; // Replace with your actual domain
 const description =
   "I'm Anumeet Kumar, a skilled front-end developer with experience in JavaScript, React.js, Next.js, Svelte, and TypeScript. Explore my portfolio and projects.";
-const imageUrl = "/profile.webp";
+const imageUrl = "https://www.anumeet.tech/profile.webp";
 
 export const metadata: Metadata = {
   title: siteName,
