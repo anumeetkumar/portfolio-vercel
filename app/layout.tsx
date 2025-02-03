@@ -7,19 +7,21 @@ import type React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteName = "Anumeet Kumar - Front-End Developer";
+const name = "Anumeet Kumar";
+const siteName = "Anumeet Kumar";
 const siteUrl = "https://www.anumeet.tech/"; // Replace with your actual domain
 const description =
   "I'm Anumeet Kumar, a skilled front-end developer with experience in JavaScript, React.js, Next.js, Svelte, and TypeScript. Explore my portfolio and projects.";
 const imageUrl = "https://www.anumeet.tech/profile.webp";
+const favIconURL = "/profile-fav.webp";
 
 export const metadata: Metadata = {
   title: siteName,
   description,
   icons: {
     icon: [
-      { url: imageUrl, sizes: "32x32", type: "image/jpeg" },
-      { url: imageUrl, sizes: "16x16", type: "image/jpeg" },
+      { url: favIconURL, sizes: "32x32", type: "image/jpeg" },
+      { url: favIconURL, sizes: "16x16", type: "image/jpeg" },
     ],
     apple: { url: imageUrl, sizes: "180x180", type: "image/jpeg" },
   },
@@ -48,8 +50,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Favicon */}
-        <link rel="shortcut icon" href={imageUrl} />
-        <link rel="apple-touch-icon" href={imageUrl} />
+        <link rel="shortcut icon" href={favIconURL} />
+        <link rel="apple-touch-icon" href={favIconURL} />
 
         {/* Canonical URL */}
         <link rel="canonical" href={siteUrl} />
@@ -57,16 +59,16 @@ export default function RootLayout({
         {/* Open Graph (OG) Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:title" content={siteName} />
+        <meta property="og:title" content={name} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content={favIconURL} />
         <meta property="og:site_name" content={siteName} />
 
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={siteName} />
+        <meta name="twitter:title" content={name} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:image" content={favIconURL} />
       </head>
       <body className={inter.className}>
         <ThemeProvider
