@@ -13,7 +13,7 @@ const siteUrl = "https://www.anumeet.tech/"; // Replace with your actual domain
 const description =
   "I'm Anumeet Kumar, a skilled front-end developer with experience in JavaScript, React.js, Next.js, Svelte, and TypeScript. Explore my portfolio and projects.";
 const imageUrl = "https://www.anumeet.tech/profile.webp";
-const favIconURL = "/profile-fav.webp";
+const favIconURL = "https://www.anumeet.tech/profile-fav.webp";
 
 export const metadata: Metadata = {
   title: siteName,
