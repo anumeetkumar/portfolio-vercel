@@ -7,72 +7,9 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
+import { projects } from "@/lib/data"
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "project-1",
-      title: "E-Commerce Platform",
-      description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: true,
-    },
-    {
-      id: "project-2",
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team workspaces.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: true,
-    },
-    {
-      id: "project-3",
-      title: "Weather Dashboard",
-      description: "A weather dashboard that displays current and forecasted weather data for multiple locations.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React", "OpenWeather API", "Chart.js"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: true,
-    },
-    {
-      id: "project-4",
-      title: "Social Media Analytics",
-      description: "A dashboard for tracking and analyzing social media performance across multiple platforms.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Vue.js", "Express", "D3.js", "Social APIs"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: false,
-    },
-    {
-      id: "project-5",
-      title: "Fitness Tracker",
-      description: "A mobile-responsive application for tracking workouts, nutrition, and fitness goals.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["React Native", "GraphQL", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: false,
-    },
-    {
-      id: "project-6",
-      title: "Recipe Finder",
-      description:
-        "An application that helps users find recipes based on available ingredients and dietary preferences.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["JavaScript", "Spoonacular API", "Bootstrap"],
-      github: "https://github.com",
-      demo: "https://example.com",
-      featured: false,
-    },
-  ]
 
   const container = {
     hidden: { opacity: 0 },
@@ -158,11 +95,6 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        <div className="flex justify-center mt-12">
-          <Button asChild variant="outline">
-            <Link href="/projects">View All Projects</Link>
-          </Button>
-        </div>
       </div>
     </section>
   )
