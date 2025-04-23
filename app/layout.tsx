@@ -20,6 +20,65 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Anumeet Kumar | Experienced Software Developer",
   description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
+  keywords: "software developer, full-stack developer, React developer, Next.js developer, TypeScript developer",
+  authors: [{ name: "Anumeet Kumar" }],
+  creator: "Anumeet Kumar",
+  publisher: "Anumeet Kumar",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://anumeet.tech",
+    siteName: "Anumeet Kumar Portfolio",
+    title: "Anumeet Kumar | Experienced Software Developer",
+    description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Anumeet Kumar - Software Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anumeet Kumar | Experienced Software Developer",
+    description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
+    images: ["/og-image.png"],
+    creator: "@anumeetkumar",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png" },
+      { url: "/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
+      { url: "/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
+      { url: "/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-startup-image",
+        url: "/apple-splash-2048-2732.png",
+        media: "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)",
+      },
+    ],
+  },
+  manifest: "/manifest.json",
+  themeColor: "#000000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Anumeet Kumar",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 }
 
 export default function RootLayout({

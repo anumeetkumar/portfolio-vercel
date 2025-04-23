@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <Hero />
 
       <div className="relative">
