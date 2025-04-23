@@ -3,72 +3,14 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Download, ArrowRight } from "lucide-react"
+import { education, experiences } from "@/lib/data"
 
 export const metadata = {
-  title: "About Me | DevPortfolio",
-  description: "Learn more about my background, experience, and skills as a software developer",
+  title: "About Me | Anumeet Kumar - Experienced Software Developer",
+  description: "Senior software developer with extensive experience in React, Next.js, and modern web technologies. Specializing in building scalable enterprise solutions.",
 }
 
 export default function AboutPage() {
-  const experiences = [
-    {
-      year: "2022 - Present",
-      title: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      description: "Leading frontend development for enterprise applications using React and TypeScript.",
-      responsibilities: [
-        "Architected and implemented scalable frontend solutions for enterprise clients",
-        "Led a team of 5 frontend developers, providing mentorship and code reviews",
-        "Implemented CI/CD pipelines and testing strategies that reduced deployment issues by 40%",
-        "Collaborated with UX designers to create intuitive user interfaces for complex applications",
-      ],
-    },
-    {
-      year: "2020 - 2022",
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      description: "Developed and maintained web applications using React, Node.js, and MongoDB.",
-      responsibilities: [
-        "Built RESTful APIs and microservices using Node.js and Express",
-        "Developed responsive frontend interfaces with React and Redux",
-        "Implemented authentication and authorization systems using JWT and OAuth",
-        "Optimized database queries and implemented caching strategies",
-      ],
-    },
-    {
-      year: "2018 - 2020",
-      title: "Junior Web Developer",
-      company: "Creative Web Agency",
-      description: "Created responsive websites and implemented UI designs using HTML, CSS, and JavaScript.",
-      responsibilities: [
-        "Converted design mockups into responsive websites using HTML5, CSS3, and JavaScript",
-        "Implemented WordPress themes and plugins for client websites",
-        "Optimized website performance and SEO",
-        "Collaborated with designers to ensure pixel-perfect implementation",
-      ],
-    },
-  ]
-
-  const education = [
-    {
-      year: "2014 - 2018",
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of Technology",
-      description: "Graduated with honors, specializing in web development and software engineering.",
-    },
-    {
-      year: "2020",
-      degree: "Advanced React and Redux Certification",
-      institution: "Frontend Masters",
-      description: "Completed intensive training on advanced React patterns and state management.",
-    },
-    {
-      year: "2021",
-      degree: "AWS Certified Developer - Associate",
-      institution: "Amazon Web Services",
-      description: "Certification in developing and maintaining applications on the AWS platform.",
-    },
-  ]
 
   return (
     <div className="container px-4 md:px-6 py-12 md:py-24">
@@ -96,11 +38,11 @@ export default function AboutPage() {
         </div>
 
         <div className="space-y-6 text-left">
-          <h2 className="text-3xl font-bold">Alex Chen</h2>
+          <h2 className="text-3xl font-bold">Anumeet</h2>
           <h3 className="text-xl font-medium text-primary">Software Developer & Problem Solver</h3>
 
           <p className="text-muted-foreground">
-            I'm a passionate software developer with over 5 years of experience creating web applications and digital
+            I'm a passionate software developer with over 4 years of experience creating web applications and digital
             experiences. I specialize in JavaScript, React, and modern frontend technologies, with a strong foundation
             in backend development.
           </p>
@@ -162,7 +104,7 @@ export default function AboutPage() {
 
       <div className="mb-16">
         <h2 className="text-3xl font-bold text-center mb-10">Education & Certifications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {education.map((edu, index) => (
             <Card key={index} className="h-full transition-all hover:shadow-lg">
               <CardContent className="p-6">

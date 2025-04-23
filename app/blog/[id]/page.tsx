@@ -90,7 +90,7 @@ In future articles, we'll explore more advanced Tailwind features like custom an
     image: "/placeholder.svg?height=400&width=800",
     date: "March 15, 2023",
     readTime: "5 min read",
-    author: "Alex Chen",
+    author: "Anumeet",
     category: "CSS",
   },
   {
@@ -101,7 +101,7 @@ In future articles, we'll explore more advanced Tailwind features like custom an
     image: "/placeholder.svg?height=400&width=800",
     date: "February 28, 2023",
     readTime: "8 min read",
-    author: "Alex Chen",
+    author: "Anumeet",
     category: "React",
   },
   {
@@ -112,7 +112,7 @@ In future articles, we'll explore more advanced Tailwind features like custom an
     image: "/placeholder.svg?height=400&width=800",
     date: "January 12, 2023",
     readTime: "6 min read",
-    author: "Alex Chen",
+    author: "Anumeet",
     category: "Next.js",
   },
 ]

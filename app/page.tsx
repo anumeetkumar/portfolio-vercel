@@ -15,8 +15,8 @@ export default function Home() {
 
       <div className="relative">
         <About />
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <Button asChild variant="outline">
+        <div className="absolute bottom-8 left-1/2  transform -translate-x-1/2">
+          <Button asChild variant="outline" className="">
             <Link href="/about" className="flex items-center gap-2">
               Learn More About Me <ArrowRight className="h-4 w-4" />
             </Link>

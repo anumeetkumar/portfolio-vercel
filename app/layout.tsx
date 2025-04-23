@@ -18,9 +18,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "DevPortfolio | Software Developer Portfolio",
-  description: "Personal portfolio website showcasing software development projects and skills",
-    generator: 'v0.dev'
+  title: "Anumeet Kumar | Experienced Software Developer",
+  description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
 }
 
 export default function RootLayout({

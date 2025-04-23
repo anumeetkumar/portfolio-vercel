@@ -47,7 +47,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <section id="contact" className=" overflow-hidden">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-12">
           <motion.div

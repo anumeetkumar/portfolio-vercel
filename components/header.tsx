@@ -53,7 +53,11 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             className="text-xl font-bold tracking-tight"
           >
-            <span className="text-primary">Dev</span>Portfolio
+            <div className="text-xl font-bold tracking-tight flex items-center gap-1">
+              <span className="text-primary border-b-2 border-primary pb-1">ANUMEET</span>
+              <span className="text-muted-foreground">/</span>
+              <span>KUMAR</span>
+            </div>
           </motion.div>
         </Link>
 

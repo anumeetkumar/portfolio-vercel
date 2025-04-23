@@ -20,7 +20,7 @@ export default function Hero() {
             className="space-y-2"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-              <span className="text-primary">Hello, I'm</span> Alex Chen
+              <span className="text-primary">Hello, I'm</span> Anumeet
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-light">Software Developer</p>
           </motion.div>

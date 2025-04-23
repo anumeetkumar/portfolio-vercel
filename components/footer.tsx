@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container px-4 md:px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Alex Chen</h3>
+            <h3 className="text-lg font-bold">Anumeet</h3>
             <p className="text-sm text-muted-foreground">
               Software developer specializing in creating exceptional digital experiences.
             </p>
@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 border-t">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Alex Chen. All rights reserved.
+            &copy; {new Date().getFullYear()} Anumeet. All rights reserved.
           </p>
           <Button variant="ghost" size="icon" onClick={scrollToTop} className="mt-4 sm:mt-0">
             <ArrowUp className="h-5 w-5" />
