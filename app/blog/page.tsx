@@ -3,72 +3,10 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { blogPosts } from "@/lib/data"
 
 // This would typically come from a database, CMS, or API
-const blogPosts = [
-  {
-    id: "post-1",
-    title: "Building Responsive UIs with Tailwind CSS",
-    excerpt: "Learn how to create beautiful, responsive user interfaces using Tailwind CSS utility classes.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "March 15, 2023",
-    readTime: "5 min read",
-    category: "CSS",
-  },
-  {
-    id: "post-2",
-    title: "State Management in React: Context API vs. Redux",
-    excerpt: "A comparison of different state management approaches in React applications.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "February 28, 2023",
-    readTime: "8 min read",
-    category: "React",
-  },
-  {
-    id: "post-3",
-    title: "Getting Started with Next.js and TypeScript",
-    excerpt: "A comprehensive guide to setting up a new project with Next.js and TypeScript.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "January 12, 2023",
-    readTime: "6 min read",
-    category: "Next.js",
-  },
-  {
-    id: "post-4",
-    title: "Optimizing Performance in React Applications",
-    excerpt:
-      "Learn techniques to improve the performance of your React applications and provide a better user experience.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "December 5, 2022",
-    readTime: "7 min read",
-    category: "Performance",
-  },
-  {
-    id: "post-5",
-    title: "Introduction to GraphQL with Apollo Client",
-    excerpt: "Discover how GraphQL can simplify your API requests and make your frontend code more efficient.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "November 18, 2022",
-    readTime: "9 min read",
-    category: "GraphQL",
-  },
-  {
-    id: "post-6",
-    title: "Building Accessible Web Applications",
-    excerpt:
-      "Best practices for creating web applications that are accessible to all users, including those with disabilities.",
-    content: "Full content would go here...",
-    image: "/placeholder.svg?height=400&width=600",
-    date: "October 22, 2022",
-    readTime: "6 min read",
-    category: "Accessibility",
-  },
-]
+
 
 export default function BlogPage() {
   return (

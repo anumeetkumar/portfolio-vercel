@@ -50,12 +50,12 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="relative w-[95%] h-[400px] md:w-full overflow-hidden rounded-lg">
+            <div className="relative w-[95%] h-[400px] md:w-full overflow-hidden rounded-lg cursor-pointer">
               <Image
-                src="/about.jpg"
+                src="/full-img.jpg"
                 alt="Developer portrait"
                 fill
-                className="object-cover object-top w-5/6"
+                className="object-cover object-top w-5/6 grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
@@ -87,7 +87,7 @@ export default function About() {
             </p>
             <div className="pt-4">
               <Button asChild>
-                <Link href="/resume.pdf" target="_blank">
+                <Link href="file/AnumeetKumarResume.pdf" target="_blank">
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </Link>
               </Button>

@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { motion } from "framer-motion"
-import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -16,33 +16,35 @@ const navItems = [
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
-]
+];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const isActive = (path: string) => {
     if (path === "/") {
-      return pathname === path
+      return pathname === path;
     }
-    return pathname.startsWith(path)
-  }
+    return pathname.startsWith(path);
+  };
 
   return (
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent",
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -54,7 +56,9 @@ export default function Header() {
             className="text-xl font-bold tracking-tight"
           >
             <div className="text-xl font-bold tracking-tight flex items-center gap-1">
-              <span className="text-primary border-b-2 border-primary pb-1">ANUMEET</span>
+              <span className="text-primary border-b-2 border-primary pb-1">
+                ANUMEET
+              </span>
               <span className="text-muted-foreground">/</span>
               <span>KUMAR</span>
             </div>
@@ -75,7 +79,9 @@ export default function Header() {
                   href={item.path}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-primary",
-                    isActive(item.path) ? "text-primary" : "text-muted-foreground",
+                    isActive(item.path)
+                      ? "text-primary"
+                      : "text-muted-foreground"
                   )}
                 >
                   {item.name}
@@ -95,7 +101,11 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
       </div>
@@ -117,7 +127,9 @@ export default function Header() {
                     href={item.path}
                     className={cn(
                       "block py-2 text-sm font-medium transition-colors hover:text-primary",
-                      isActive(item.path) ? "text-primary" : "text-muted-foreground",
+                      isActive(item.path)
+                        ? "text-primary"
+                        : "text-muted-foreground"
                     )}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -130,5 +142,5 @@ export default function Header() {
         </motion.div>
       )}
     </header>
-  )
+  );
 }

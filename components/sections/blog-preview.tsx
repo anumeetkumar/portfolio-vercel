@@ -6,34 +6,9 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { blogPosts } from "@/lib/data"
 
 export default function BlogPreview() {
-  const blogPosts = [
-    {
-      id: "post-1",
-      title: "Building Responsive UIs with Tailwind CSS",
-      excerpt: "Learn how to create beautiful, responsive user interfaces using Tailwind CSS utility classes.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "March 15, 2023",
-      readTime: "5 min read",
-    },
-    {
-      id: "post-2",
-      title: "State Management in React: Context API vs. Redux",
-      excerpt: "A comparison of different state management approaches in React applications.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "February 28, 2023",
-      readTime: "8 min read",
-    },
-    {
-      id: "post-3",
-      title: "Getting Started with Next.js and TypeScript",
-      excerpt: "A comprehensive guide to setting up a new project with Next.js and TypeScript.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "January 12, 2023",
-      readTime: "6 min read",
-    },
-  ]
 
   const container = {
     hidden: { opacity: 0 },
@@ -75,7 +50,7 @@ export default function BlogPreview() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {blogPosts.map((post) => (
+          {blogPosts.slice(0, 3).map((post) => (
             <motion.div key={post.id} variants={item}>
               <Card className="h-full overflow-hidden group">
                 <div className="relative h-48 overflow-hidden">

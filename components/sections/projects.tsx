@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import Image from "next/image"
-import { ExternalLink, Github } from "lucide-react"
-import { projects } from "@/lib/data"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
+import { ExternalLink, Github } from "lucide-react";
+import { projects } from "@/lib/data";
 
 export default function Projects() {
-
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -19,15 +18,15 @@ export default function Projects() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
 
   // Filter featured projects for initial display
-  const featuredProjects = projects.filter((project) => project.featured)
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -39,11 +38,13 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              My Projects
+            </h2>
             <div className="mt-2 h-1 w-20 bg-primary mx-auto"></div>
             <p className="mt-4 text-muted-foreground max-w-[700px] mx-auto">
-              Here are some of my recent projects. Each one was built to solve a specific problem or explore new
-              technologies.
+              Here are some of my recent projects. Each one was built to solve a
+              specific problem or explore new technologies.
             </p>
           </motion.div>
         </div>
@@ -69,7 +70,9 @@ export default function Projects() {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags.map((tag, i) => (
                       <Badge key={i} variant="secondary">
@@ -79,11 +82,17 @@ export default function Projects() {
                   </div>
                 </CardContent>
                 <CardFooter className="px-6 pb-6 pt-0 flex justify-between">
-                  <Button asChild variant="outline" size="sm">
-                    <Link href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" /> Code
-                    </Link>
-                  </Button>
+                  {project.github && (
+                    <Button asChild variant="outline">
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="mr-2 h-4 w-4" /> View Code
+                      </Link>
+                    </Button>
+                  )}
                   <Button asChild size="sm">
                     <Link href={`/projects/${project.id}`}>
                       View Details <ExternalLink className="ml-2 h-4 w-4" />
@@ -94,8 +103,7 @@ export default function Projects() {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
-  )
+  );
 }
