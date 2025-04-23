@@ -4,84 +4,10 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Database, Server, Palette, Wrench, BrainCircuit } from "lucide-react"
+import { skillCategories } from "@/lib/data"
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      id: "frontend",
-      name: "Frontend",
-      icon: <Code className="h-5 w-5" />,
-      skills: [
-        { name: "HTML5/CSS3", level: 90 },
-        { name: "JavaScript (ES6+)", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "React.js", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Framer Motion", level: 75 },
-        { name: "Redux", level: 80 },
-      ],
-    },
-    {
-      id: "backend",
-      name: "Backend",
-      icon: <Server className="h-5 w-5" />,
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "Python", level: 70 },
-        { name: "Django", level: 65 },
-        { name: "RESTful APIs", level: 85 },
-        { name: "GraphQL", level: 75 },
-      ],
-    },
-    {
-      id: "database",
-      name: "Database",
-      icon: <Database className="h-5 w-5" />,
-      skills: [
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MySQL", level: 70 },
-        { name: "Firebase", level: 85 },
-        { name: "Redis", level: 65 },
-      ],
-    },
-    {
-      id: "devops",
-      name: "DevOps",
-      icon: <Wrench className="h-5 w-5" />,
-      skills: [
-        { name: "Git/GitHub", level: 90 },
-        { name: "Docker", level: 75 },
-        { name: "CI/CD", level: 70 },
-        { name: "AWS", level: 65 },
-        { name: "Vercel", level: 85 },
-      ],
-    },
-    {
-      id: "design",
-      name: "Design",
-      icon: <Palette className="h-5 w-5" />,
-      skills: [
-        { name: "Figma", level: 80 },
-        { name: "Adobe XD", level: 70 },
-        { name: "UI/UX Principles", level: 75 },
-        { name: "Responsive Design", level: 90 },
-      ],
-    },
-    {
-      id: "other",
-      name: "Other",
-      icon: <BrainCircuit className="h-5 w-5" />,
-      skills: [
-        { name: "Testing (Jest, RTL)", level: 75 },
-        { name: "Agile/Scrum", level: 80 },
-        { name: "Problem Solving", level: 90 },
-        { name: "Technical Writing", level: 75 },
-      ],
-    },
-  ]
+
 
   const container = {
     hidden: { opacity: 0 },
