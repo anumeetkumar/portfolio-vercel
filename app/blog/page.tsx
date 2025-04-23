@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
-import { blogPosts } from "@/lib/data"
+import { blogPosts } from "@/lib/blogData"
 
 // This would typically come from a database, CMS, or API
 
@@ -42,7 +42,9 @@ export default function BlogPage() {
                   {post.readTime}
                 </div>
               </div>
-              <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
+              <Link href={`/blog/${post.id}`}>
+                <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h2>
+              </Link>
               <p className="text-muted-foreground">{post.excerpt}</p>
             </CardContent>
             <CardFooter className="px-6 pb-6 pt-0">

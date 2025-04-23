@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
-import { blogPosts } from "@/lib/data"
+import { blogPosts } from "@/lib/blogData"
 
 export default function BlogPreview() {
 
@@ -73,7 +73,9 @@ export default function BlogPreview() {
                       {post.readTime}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h3>
+                  <Link href={`/blog/${post.id}`}>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{post.title}</h3>
+                  </Link>
                   <p className="text-muted-foreground">{post.excerpt}</p>
                 </CardContent>
                 <CardFooter className="px-6 pb-6 pt-0">
