@@ -58,7 +58,7 @@ export default function Hero() {
             className="flex space-x-4 mt-8"
           >
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/anumeetkumar" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/anumeetkumar/anumeetkumar" target="_blank" rel="noopener noreferrer">
                 <Github className="h-10 w-10 scale-150" />
                 <span className="sr-only">GitHub</span>
               </Link>

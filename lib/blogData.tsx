@@ -1,10 +1,3 @@
-import State from "@/lib/assets/images/blogs/state.webp"
-import Next from "@/lib/assets/images/blogs/next.webp"
-import Performance from "@/lib/assets/images/blogs/performance.webp"
-import Tailwind from "@/lib/assets/images/blogs/tailwind.webp"
-import Web from "@/lib/assets/images/blogs/web.webp"
-
-
 export const blogPosts = [
   {
     id: "post-1",
