@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://anumeet.tech/about.webp",
         width: 1200,
         height: 630,
         alt: "Anumeet Kumar - Software Developer",
@@ -54,17 +54,7 @@ export const metadata: Metadata = {
       { url: "/icon.png", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-icon.png" },
-      { url: "/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
-    ],
-    other: [
-      {
-        rel: "apple-touch-startup-image",
-        url: "/apple-splash-2048-2732.png",
-        media: "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)",
-      },
+      { url: "https://anumeet.tech/apple-touch-icon.png" },
     ],
   },
   manifest: "/manifest.json",
