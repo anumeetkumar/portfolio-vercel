@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
     images: [
       {
-        url: "https://anumeet.tech/about.webp",
+        url: "https://anumeet.tech/full-img.webp",
         width: 1200,
         height: 630,
         alt: "Anumeet Kumar - Software Developer",

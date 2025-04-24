@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="relative">
           <div className="relative w-[95%] h-[400px] md:w-full overflow-hidden rounded-lg cursor-pointer">
             <Image
-              src="/full-img.jpg"
+              src="/full-img.webp"
               alt="Developer portrait"
               fill
               className="object-cover object-top w-5/6 grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110"
