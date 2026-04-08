@@ -81,6 +81,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+    <head>
+      <meta name="google-site-verification" content="iPVxIG40LJzhLcIi68hyjfXQ2wIY2QF-Jbwn-dNjxNk" />
+      </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
