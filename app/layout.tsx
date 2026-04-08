@@ -18,6 +18,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+    verification: {
+    google: "iPVxIG40LJzhLcIi68hyjfXQ2wIY2QF-Jbwn-dNjxNk",
+  },
   title: "Anumeet Kumar | Experienced Software Developer",
   description: "Senior software developer with extensive experience in building scalable applications and enterprise solutions",
   keywords: "software developer, full-stack developer, React developer, Next.js developer, TypeScript developer",
