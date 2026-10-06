@@ -47,19 +47,30 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
+      if (response.ok) {
+        setIsSuccess(true);
+        form.reset();
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        console.error('Failed to send message');
+        // You can add a toast notification here for error
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      form.reset();
-
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    }
   }
 
   return (
